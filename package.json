@@ -1,22 +1,22 @@
 {
-  "name": "cryptoinformantbot",
+  "name": "satoshibot",
   "version": "1.0.0",
-  "description": "Discord Bot to keep track of crypto prices and stats.",
+  "description": "Discord economy bot with crypto concepts.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nestdot/CryptoInformantBot.git"
+    "url": "git+https://github.com/Nestdot/SatoshiBot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nestdot/CryptoInformantBot/issues"
+    "url": "https://github.com/Nestdot/SatoshiBot/issues"
   },
-  "homepage": "https://github.com/Nestdot/CryptoInformantBot#readme",
+  "homepage": "https://github.com/Nestdot/SatoshiBot#readme",
   "dependencies": {
     "discord.js": "^14.7.1",
     "eslint-config-prettier": "^8.5.0"
