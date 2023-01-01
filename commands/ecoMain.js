@@ -6,7 +6,7 @@ const {
 	WebhookClient,
 } = require('discord.js');
 
-const eco = require('../../Database/ecoDB');
+const eco = require('../Database/ecoDB');
 
 module.exports = {
 	data: new SlashCommandBuilder()
