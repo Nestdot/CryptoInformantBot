@@ -13,7 +13,7 @@ const eco = require('../../Database/ecoDB');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('eco-admin')
-		.setDescription('Modify a user balance')
+		.setDescription('Modify a user\'s balance')
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
 		.addSubcommand((subcommand) =>
 			subcommand
@@ -120,5 +120,5 @@ module.exports = {
 		}
 			break;
 		}
-	}
+	},
 };
