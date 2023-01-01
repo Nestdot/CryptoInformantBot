@@ -6,7 +6,7 @@ const {
 	WebhookClient,
 } = require('discord.js');
 
-const eco = require('../Database/ecoDB');
+const eco = require('../database/ecoDB');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -53,10 +53,10 @@ module.exports = {
 				),
 		),
 	/**
-         *
-         * @param {ChatInputCommandInteraction} interaction
-         * @param {Client} client
-         */
+     *
+     * @param {ChatInputCommandInteraction} interaction
+     * @param {Client} client
+     */
 	async execute(interaction, client) {
 		const sub = interaction.options.getSubcommand();
 		const embed = new EmbedBuilder();
