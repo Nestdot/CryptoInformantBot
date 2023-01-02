@@ -185,7 +185,7 @@ module.exports = {
 		case (`list`) : {
 			const shopList = eco.shop.all(guild.id);
 
-			let listMap = shopList.map(item => `ID: **${item.id}** = **${item.name}** (**${item.price}** coins)\nDescription: ${item.description}\nMax amount per person: ${item.maxAmount || \`Infinity\`}\nRole: ${item.role || \`No role with this item\`}`);
+			let listMap = shopList.map(item => `ID: **${item.id}** = **${item.name}** (**${item.price}** coins)\nDescription: ${item.description}\nMax amount per person: ${item.maxAmount || `Infinity`}\nRole: ${item.role || \`No role with this item\`}`);
 			if (!shopList.length) return interaction.reply(`There is nothing in this guild's shop`);
 
 			embed

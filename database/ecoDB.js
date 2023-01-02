@@ -1,7 +1,7 @@
-const Economy = require('discord-economy-super');
-const { truncate } = require('fs');
+const Economy = require(`discord-economy-super`);
+const { truncate } = require(`fs`);
 const eco = new Economy({
-	storagePath: './storage.json',
+	storagePath: `./storage.json`,
 	updateCountdown: 1000,
 	checkStorage: true,
 	deprecationWarnings: true,
@@ -13,7 +13,7 @@ const eco = new Economy({
 	dailyCooldown: 60000 * 60 * 24,
 	workCooldown: 60000 * 60,
 	weeklyCooldown: 60000 * 60 * 24 * 7,
-	dateLocale: 'en',
+	dateLocale: `en`,
 	updater: {
 		checkUpdates: true,
 		upToDateMessage: true,
@@ -33,8 +33,8 @@ const eco = new Economy({
 	},
 });
 
-eco.on('ready', () => {
-	console.log('Economy System is now ready to be used');
+eco.on(`ready`, () => {
+	console.log(`Economy System is now ready to be used`);
 });
 
 module.exports = eco;
