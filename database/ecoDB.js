@@ -1,7 +1,13 @@
-const Economy = require(`discord-economy-super`);
+const Economy = require(`discord-economy-super/mongodb`);
+const { mongoDBPassword } = require(`./config.json`);
 const { truncate } = require(`fs`);
 const eco = new Economy({
-	storagePath: `./storage.json`,
+	connection: {
+		connectionURI: `mongodb+srv://satbot:${mongoDBPassword}@clustersb.jrrexl1.mongodb.net/?retryWrites=true&w=majority`,
+		collectionName: `collection`,
+		dbName: `db`,
+		congoClientOptions: {},
+	},
 	updateCountdown: 1000,
 	checkStorage: true,
 	deprecationWarnings: true,

@@ -2,6 +2,8 @@ const fs = require(`node:fs`);
 const path = require(`node:path`);
 const { Client, Collection, GatewayIntentBits } = require(`discord.js`);
 const { token } = require(`./config.json`);
+const { mongoDBPassword } = require(`./config.json`);
+const mongoose = require(`mongoose`);
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -37,3 +39,12 @@ for (const file of commandFiles) {
 }
 
 client.login(token);
+
+mongoose.connect(`mongodb+srv://satbot:${mongoDBPassword}@clustersb.jrrexl1.mongodb.net/?retryWrites=true&w=majority`, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+}).then(() => {
+	console.log(`Connected to database`);
+}).catch((err) => {
+	console.log(err);
+});
