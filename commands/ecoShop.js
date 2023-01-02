@@ -178,14 +178,14 @@ module.exports = {
 
 			if (buyItem2.role)interaction.guild.members.cache.get(interaction.member.id).roles.add(interaction.guild.roles.cache.get(buyItem2.role));
 
-			interaction.reply(`You have received item ${buyitem2.name} for ${buyitem2.price} coins!`);
+			interaction.reply(`You have received item ${buyItem2.name} for ${buyItem2.price} coins!`);
 
 		}
 			break;
 		case (`list`) : {
 			const shopList = eco.shop.all(guild.id);
 
-			let listMap = shopList.map(item => `ID: **${item.id}** = **${item.name}** (**${item.price}** coins)\nDescription: ${item.description}\nMax amount per person: ${item.maxAmount || `Infinity`}\nRole: ${item.role || \`No role with this item\`}`);
+			let listMap = shopList.map(item => `ID: **${item.id}** = **${item.name}** (**${item.price}** coins)\nDescription: ${item.description}\nMax amount per person: ${item.maxAmount || `Infinity`}\nRole: ${item.role || `No role with this item`}`);
 			if (!shopList.length) return interaction.reply(`There is nothing in this guild's shop`);
 
 			embed
