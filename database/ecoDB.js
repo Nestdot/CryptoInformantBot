@@ -6,7 +6,7 @@ const eco = new Economy({
 		connectionURI: `mongodb+srv://satbot:${mongoDBPassword}@clustersb.jrrexl1.mongodb.net/?retryWrites=true&w=majority`,
 		collectionName: `collection`,
 		dbName: `db`,
-		mongoClientOptions: {},
+		mongoClientProperties: {},
 	},
 	updateCountdown: 1000,
 	deprecationWarnings: true,
